@@ -37,7 +37,7 @@ public class RestauranteElBuenSabor {
             opcionMenu = sc.nextInt();
             if (opcionMenu == 1) {
                 // mostrar carta
-                Imprimir.mostrarCarta();
+                FacturaImpresor.mostrarCarta();
                 System.out.println();
             } else if (opcionMenu == 2) {
                 // agregar producto
@@ -92,7 +92,7 @@ public class RestauranteElBuenSabor {
                 // ver pedido actual
                 System.out.println();
                 if (Utilidades.validar()) {
-                    Imprimir.mostrarPedido();
+                    FacturaImpresor.mostrarPedido();
                 } else {
                     System.out.println("No hay productos en el pedido actual.");
                     System.out.println("Use la opcion 2 para agregar productos.");
@@ -105,12 +105,12 @@ public class RestauranteElBuenSabor {
                 if (Utilidades.validar()) {
                     double r = 0;
                     // procesar pedido y generar total
-                    r = Proceso.hacerTodo();
+                    r = CalcularFactura.hacerTodo();
                     tmp = (int) r;
                     aux = "Total calculado: $" + tmp;
                     montoProducto = r;
                     // imprimir factura detallada
-                    Imprimir.imprimirFacturaCompleta();
+                    FacturaImpresor.imprimirFacturaCompleta();
                     System.out.println();
                 } else {
                     System.out.println("No se puede generar factura.");

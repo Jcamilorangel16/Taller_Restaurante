@@ -8,7 +8,7 @@ package com.mycompany.restauranteelbuensabor;
  *
  * @author alfre
  */
-public class Proceso {
+public class CalcularFactura {
 
     public static double hacerTodo() {
         double subtotal = 0;
