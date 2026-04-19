@@ -30,7 +30,7 @@ public class Utilidades {
         return aux2;
     }
 
-    public static boolean validar() {
+    public static boolean hayProductosEnPeddido() {
         int cont = 0;
         int indice = 0;
         while (indice < Datos.cantidades.length) {
