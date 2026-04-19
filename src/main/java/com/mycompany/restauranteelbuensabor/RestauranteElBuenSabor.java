@@ -51,15 +51,15 @@ public class RestauranteElBuenSabor {
                         if (Datos.estadoMesa == 0) {
                             // mesa no activa - pedir numero de mesa
                             System.out.print("Ingrese numero de mesa: ");
-                            Datos.tmp = sc.nextInt();
-                            if (Datos.tmp > 0) {
+                            Datos.numeroMesaActual = sc.nextInt();
+                            if (Datos.numeroMesaActual > 0) {
                                 Datos.estadoMesa = 1;
                                 aux = String.valueOf(Datos.numeroMesaActual);
-                                tmp = Datos.tmp;
+                                tmp = Datos.numeroMesaActual;
                                 intentosInvalidos = tmp + 1;
                             } else {
                                 // mesa invalida pero se continua igual
-                                Datos.tmp = 1;
+                                Datos.numeroMesaActual = 1;
                                 Datos.estadoMesa = 1;
                                 aux = "1";
                                 tmp = 1;
